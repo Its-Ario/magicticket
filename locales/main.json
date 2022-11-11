@@ -1,0 +1,71 @@
+{
+  "embeds": {
+    "openTicket": {
+      "title": "ساخت تیکت ✉️",
+      "description": "✅برای ساخت تیکت روی دکمه زیر کلیک کنید! ",
+      "footer": {
+        "text": "MagicNetwork",
+        "iconUrl": ""
+      }
+    },
+    "ticketOpened": {
+      "title": "تیکت CATEGORYNAME",
+      "description": "تیم استف به سرعت به شما جواب خواهند داد.",
+      "footer": {
+        "text": "MagicNetwork",
+        "iconUrl": ""
+      }
+    },
+    "ticketClosed": {
+      "title": "تیکت بسته شد",
+      "description": "تیکت توسط CLOSERNAME بسته شد"
+    },
+    "ticketClosedDM": {
+      "title": "تیکت شما بسته شد",
+      "description": "تیکت شما توسط CLOSERNAME بسته شد!",
+      "footer": {
+        "text": "MagicNetwork",
+        "iconUrl": ""
+      }
+    }
+  },
+  "modals": {
+    "reasonTicketOpen": {
+      "title": "Open ticket",
+      "label": "The reason of your ticket",
+      "placeholder": "Please enter the reason of why you are opening a ticket"
+    },
+    "reasonTicketClose": {
+      "title": "Close ticket",
+      "label": "The reason of the ticket closure",
+      "placeholder": "Please enter the reason of why you are closing the ticket"
+    }
+  },
+  "buttons": {
+    "close": {
+      "label": "بستن تیکت",
+      "emoji": "🔒"
+    },
+    "claim": {
+      "label": "کلیم کردن",
+      "emoji": "🙋"
+    }
+  },
+  "ticketOpenedMessage": "تیکت ساخته شد! TICKETCHANNEL",
+  "ticketOnlyClaimableByStaff": "فقط یک استف می تواند تیکت را کلیم کند.",
+  "ticketAlreadyClaimed": "تیکت قبلا کلیم شده.",
+  "ticketClaimedMessage": "> تیکت توسط USER کلیم شد!",
+  "ticketOnlyClosableByStaff": "فقط استف می توانند  تیکت را ببندند",
+  "ticketAlreadyClosed": "تیکت قبلا بسته شده!",
+  "ticketCreatingTranscript": "> در حال ذخیره...",
+  "ticketTranscriptCreated": "> تیکت ذخیره شد",
+  "ticketLimitReached": "شما فقط می توانید TICKETLIMIT تیکت باز همزمان داشته باشید.",
+
+  "other": {
+    "openTicketButtonMSG": "ساخت تیکت",
+    "deleteTicketButtonMSG": "حذف تیکت",
+    "selectTicketTypePlaceholder": "نوع تیکت را انتخاب کنید",
+    "claimedBy": "**Claimed By**: USER",
+    "noReasonGiven": "بدون دلیل"
+  }
+}

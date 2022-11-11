@@ -1,0 +1,60 @@
+{
+  "clientId": "983626048866496532", // The id of the discord bot
+  "guildId": "928318310985138186", // The id of the discord server
+  "mainColor": "f6c42f", // The hex color of the embeds by default
+  "lang": "main", // If you want to set english please set "main"
+
+
+  "openTicketChannelId": "928327274766413854", // The id of the channel where the message to create a ticket will be sent
+  "ticketTypes": [ // You have a limit of 25 types (the limit of Discord)
+    {
+      "codeName": "support", // The name need to be in lowercase
+      "name": "ساپورت", // The name that will be displayed in the ticket
+      "emoji": "❓", // The emoji of the type (can be blank)
+      "color": "#53f22c", // Can be a hex color or blank to use the main color
+      "categoryId": "928350228891992156", // The category id where the tickets will be created
+      "customDescription": "لطفا درباره مشکلتون بیشتر توضیح بدین تا تیم استف بتوانند به شما کمک کنند.", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    },
+    {
+      "codeName": "stafftest", // The name need to be in lowercase
+      "name": "تست استف", // The name that will be displayed in the ticket
+      "emoji": "🤵", // The emoji of the type (can be blank)
+      "color": "#e45671", // Can be a hex color or blank to use the main color
+      "categoryId": "928350228891992156", // The category id where the tickets will be created
+      "customDescription": "لطفا فرم زیر را کامل کرده و سپس منتظر جواب تیم استف بمونید. ✅", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    },
+    {
+      "codeName": "report", // The name need to be in lowercase
+      "name": "ریپورت", // The name that will be displayed in the ticket
+      "emoji": "🛑", // The emoji of the type (can be blank)
+      "color": "#f22c2c", // Can be a hex color or blank to use the main color
+      "categoryId": "928350228891992156", // The category id where the tickets will be created
+      "customDescription": "لطفا ریپورتتون رو توضیح بدید و اگه مدرکی دارید اینجا ارسال کنید!", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    },
+    {
+      "codeName": "exchange", // The name need to be in lowercase
+      "name": "اکسچنج", // The name that will be displayed in the ticket
+      "emoji": "📰", // The emoji of the type (can be blank)
+      "color": "f5f1bc", // Can be a hex color or blank to use the main color
+      "categoryId": "928350228891992156", // The category id where the tickets will be created
+      "customDescription": "لطفا بنر سرورتون رو به دایرکت <@927913425261183007> ارسال کنید و بنر سرور ما هم از چنل <#939203924144029767> بردارید و منتظر جواب اونر بمونید.", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    }
+  ],
+  "ticketNameOption": "📨┃Ticket-USERNAME", // Here is all parameter: USERNAME, USERID, TICKETCOUNT
+  "rolesWhoHaveAccessToTheTickets": [
+    "928349847252246528"
+  ], // Roles who can access to the tickets
+  "pingRoleWhenOpened": true,
+  "roleToPingWhenOpenedId": "928349847252246528", // The role to ping when a ticket is opened
+  "logs": true,
+  "logsChannelId": "956569517255979018", // The id of the channel where the logs will be sent
+  "claimButton": true,
+  "whoCanCloseTicket": "STAFFONLY", // STAFFONLY (roles configured at "rolesWhoHaveAccessToTheTickets") or EVERYONE
+  "closeButton": true, // If false the ticket can be closed only by doing /closes
+  "askReasonWhenClosing": false, // If false the ticket will be closed without asking the reason
+  "maxTicketOpened": 1 // The number of tickets the user can open while another one is already open. Set to 0 to unlimited
+}
