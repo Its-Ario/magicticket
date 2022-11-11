@@ -2,7 +2,7 @@
   "embeds": {
     "openTicket": {
       "title": "ساخت تیکت ✉️",
-      "description": "✅برای ساخت تیکت روی دکمه زیر کلیک کنید! ",
+      "description": "✅ برای ساخت تیکت روی دکمه زیر کلیک کنید! ",
       "footer": {
         "text": "MagicNetwork",
         "iconUrl": ""

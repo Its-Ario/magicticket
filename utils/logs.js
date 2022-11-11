@@ -7,7 +7,7 @@ module.exports = {
 
     let webhooks = await channel.fetchWebhooks()
     if (webhooks.size === 0) {
-      await channel.createWebhook({ name: "Ticket Bot Logs"});
+      await channel.createWebhook({ name: "MagicTicket Logs"});
       webhooks = await channel.fetchWebhooks();
     }
     const webhook = webhooks.first();
@@ -16,7 +16,7 @@ module.exports = {
       const embed = new client.discord.EmbedBuilder()
       .setColor("3ba55c")
       .setAuthor({ name: logs.user.tag, iconURL: logs.user.avatarURL })
-      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) Created a ticket (<#${logs.ticketChannelId}>) with the reason: \`${logs.reason}\``);
+      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) تیکت (<#${logs.ticketChannelId}>) رو با دلیل \`${logs.reason}\` ساخت.`);
 
       webhook.send({
         username: "Ticket Created",
@@ -29,7 +29,7 @@ module.exports = {
       const embed = new client.discord.EmbedBuilder()
       .setColor("faa61a")
       .setAuthor({ name: logs.user.tag, iconURL: logs.user.avatarURL })
-      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) Claimed the ticket n°${logs.ticketId} (<#${logs.ticketChannelId}>) after ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} of creation`);
+      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) تیکت ${logs.ticketId} (<#${logs.ticketChannelId}>) رو بعد از ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} از ساخت کلیم کرد!`);
 
       webhook.send({
         username: "Ticket Claimed",
@@ -42,7 +42,7 @@ module.exports = {
       const embed = new client.discord.EmbedBuilder()
       .setColor("ed4245")
       .setAuthor({ name: logs.user.tag, iconURL: logs.user.avatarURL })
-      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) Closed the ticket n°${logs.ticketId} (<#${logs.ticketChannelId}>) with the reason: \`${logs.reason}\` after ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} of creation`);
+      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) تیکت$ {logs.ticketId} (<#${logs.ticketChannelId}>) رو با دلیل: \`${logs.reason}\` بعد از ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} از ساخت بست.`);
 
       webhook.send({
         username: "Ticket Closed",
@@ -55,7 +55,7 @@ module.exports = {
       const embed = new client.discord.EmbedBuilder()
       .setColor("ed4245")
       .setAuthor({ name: logs.user.tag, iconURL: logs.user.avatarURL })
-      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) Deleted the ticket n°${logs.ticketId} after ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} of creation\n\nTranscript: ${logs.transcriptURL}`);
+      .setDescription(`${logs.user.tag} (<@${logs.user.id}>) تیکت ${logs.ticketId} رو بعد از ${client.msToHm(new Date(Date.now() - logs.ticketCreatedAt))} از ساخت پاک کرد!\n\nTranscript: ${logs.transcriptURL}`);
 
       webhook.send({
         username: "Ticket Deleted",
